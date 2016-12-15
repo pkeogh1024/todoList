@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>ToDo List</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="styles.css">
     <script src="app.js"></script>
   </head>
   <body>
+  <div class="container">
     <h1>ToDo</h1>
     <form name="form" id="form" onsubmit="return false;">
       <input type="text" id="userInput"/>
-      <input type="submit" onclick="addTodo()";/>
+      <input type="submit" class="btn btn-info" onclick="addTodo()";/>
     </form>
     <ul id="results">
 
     </ul>
+  </div>
     <script src="todo.js"></script>
   </body>
 </html>
