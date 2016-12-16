@@ -1,0 +1,20 @@
+{
+  "name": "todo",
+  "description": "",
+  "main": "todo.js",
+  "authors": [
+    "Tiesha Sims <pkeogh1024@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/pkeogh1024/todoList",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "es6-promise": "^4.0.5"
+  }
+}

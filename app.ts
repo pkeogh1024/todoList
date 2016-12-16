@@ -1,3 +1,5 @@
+const APIKEY = "ddf4617215c851dc1872708540707032"
+
 class Todo {
   task: string;
 
@@ -5,6 +7,21 @@ class Todo {
     this.task = task;
   }
 }
+
+class HttpCall {
+  getData(url: string) {
+    let promise = new Promise((resolve, reject) => {
+      let request = new XMLHttpRequest();
+      request.addEventListener('load', function () {
+        resolve(JSON.parse(request.responseText));
+      })
+      request.open('GET',url);
+      request.send();
+    });
+    return promise;
+  }
+}
+
 
 function addTodo(){
   let input = <HTMLInputElement>document.getElementById("userInput");
@@ -24,3 +41,15 @@ function clearForm(){
     document.form.reset();
   }
 }
+
+function convertToFarenheit(temp) {
+  return temp * 9/5 - 459.67;
+}
+
+let $http = new HttpCall();
+$http.getData("http://api.openweathermap.org/data/2.5/weather?API=&APPID=" + APIKEY + "&q=Phoenix")
+.then((data) => {
+  console.log(data.main.temp);
+  let result = convertToFarenheit(data.main.temp);
+  document.getElementById("temperature").innerHTML = "Current Temp! " +  parseInt(result);
+});

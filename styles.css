@@ -1,3 +1,19 @@
-body {
+.title {
   color:red;
+  text-align: center;
+}
+
+#results {
+  color:  black;
+  font-size: 300%;
+}
+
+body {
+  background-image: url(https://cdn.vectorstock.com/i/composite/89,00/cartoon-smiling-star-pointing-vector-5548900.jpg);
+  background-repeat: no-repeat;
+  
+}
+
+.work {
+  text-align: center;
 }
